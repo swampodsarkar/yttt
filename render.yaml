@@ -1,0 +1,10 @@
+services:
+  - type: web
+    name: tubeplay
+    runtime: node
+    plan: free
+    buildCommand: pip install -U yt-dlp && (apt-get update && apt-get install -y ffmpeg || true)
+    startCommand: npm start
+    envVars:
+      - key: YTDLP_CMD
+        value: yt-dlp

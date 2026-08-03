@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#ff0000">
+    <meta name="description" content="TubePlay - YouTube Music & Video Player">
+    <title>TubePlay - YouTube Music & Video</title>
+    <link rel="manifest" href="/manifest.webmanifest">
+    <link rel="icon" href="/icons/icon.svg" type="image/svg+xml">
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+    <div class="app">
+        <header class="app-header">
+            <div class="brand">
+                <svg class="brand-icon" viewBox="0 0 32 32" width="32" height="32">
+                    <rect width="32" height="32" rx="6" fill="#ff0000"/>
+                    <polygon points="13,8 24,16 13,24" fill="#fff"/>
+                </svg>
+                <h1>TubePlay</h1>
+            </div>
+            <nav class="tabs" id="tabs">
+                <button class="tab active" data-mode="music">Music</button>
+                <button class="tab" data-mode="video">Video</button>
+                <button class="tab" data-mode="library">Library</button>
+            </nav>
+        </header>
+
+        <main class="main">
+            <div class="search-section">
+                <div class="search-box">
+                    <input id="searchInput" type="text" placeholder="Search songs or videos..." autocomplete="off">
+                    <button id="searchBtn">Search</button>
+                </div>
+            </div>
+
+            <div id="loading" class="loading hidden">
+                <div class="spinner"></div>
+                <p>Searching...</p>
+            </div>
+
+            <div id="error" class="error hidden"></div>
+
+            <section id="resultsSection" class="hidden">
+                <h2 id="resultsTitle">Results</h2>
+                <div id="resultsList" class="results-list"></div>
+            </section>
+
+            <section id="librarySection" class="hidden">
+                <h2>Offline Library</h2>
+                <div id="libraryList" class="results-list"></div>
+                <div id="libraryEmpty" class="empty">No saved songs yet. Save some from the Music tab.</div>
+            </section>
+        </main>
+
+        <div id="lyricsModal" class="modal hidden">
+            <div class="modal-backdrop"></div>
+            <div class="modal-box">
+                <div class="modal-head">
+                    <h3 id="lyricsTitle">Lyrics</h3>
+                    <button id="lyricsClose" class="close-btn">&times;</button>
+                </div>
+                <pre id="lyricsBody" class="lyrics-body"></pre>
+            </div>
+        </div>
+
+        <div id="playerBar" class="player hidden">
+            <div class="player-info">
+                <img id="playerThumb" class="player-thumb" src="" alt="">
+                <div class="player-details">
+                    <div id="playerTitle" class="player-title">Unknown</div>
+                    <div id="playerAuthor" class="player-author">Unknown</div>
+                </div>
+                <button id="lyricsBtn" class="small-btn">Lyrics</button>
+            </div>
+            <video id="playerVideo" controls playsinline></video>
+            <div class="player-actions">
+                <button id="downloadMp3Btn" class="small-btn">Download MP3</button>
+                <button id="downloadMp4Btn" class="small-btn">Download MP4</button>
+                <button id="saveOfflineBtn" class="small-btn">Save Offline</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="/js/app.js"></script>
+</body>
+</html>

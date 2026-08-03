@@ -1,0 +1,17 @@
+{
+    "name": "TubePlay - YouTube Music & Video Player",
+    "short_name": "TubePlay",
+    "start_url": "/",
+    "display": "standalone",
+    "background_color": "#0f0f0f",
+    "theme_color": "#ff0000",
+    "description": "YouTube Music & Video Player with offline support and lyrics",
+    "icons": [
+        {
+            "src": "/icons/icon.svg",
+            "sizes": "any",
+            "type": "image/svg+xml",
+            "purpose": "any"
+        }
+    ]
+}
