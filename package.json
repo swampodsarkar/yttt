@@ -4,7 +4,8 @@
   "description": "Unofficial Simple Youtube Api",
   "main": "index.js",
   "scripts": {
-    "start": "node index.js"
+    "start": "node index.js",
+    "postinstall": "pip install -U yt-dlp && (apt-get update && apt-get install -y ffmpeg || true)"
   },
   "keywords": [
     "fatih arridho",
