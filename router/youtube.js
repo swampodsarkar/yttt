@@ -338,6 +338,8 @@ router.get("/lyrics", async(req, res) => {
         });
     }
 });
+
+router.get("/download", async(req, res) => {
     let videoUrl = req.query.url;
 
     if (!videoUrl) {

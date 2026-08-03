@@ -1,9 +1,0 @@
-services:
-  - type: web
-    name: tubeplay
-    runtime: node
-    plan: free
-    startCommand: npm start
-    envVars:
-      - key: YTDLP_CMD
-        value: yt-dlp
